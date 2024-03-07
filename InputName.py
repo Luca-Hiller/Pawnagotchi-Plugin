@@ -17,7 +17,7 @@ class Example(plugins.Plugin):
 
     # called before the plugin is unloaded
     def on_unload(self, ui):
-        logging.info(" Directions Plugin Unloaded! ... Bye!")
+        logging.info("Directions Plugin Unloaded! ... Bye!")
       
     # called hen there's internet connectivity
     def on_internet_available(self, agent):
@@ -26,20 +26,13 @@ class Example(plugins.Plugin):
     # called to setup the ui elements
     def on_ui_setup(self, ui):
         ui.add_element(
-            'version',
+            'Direction',
             LabeledValue(
                 color=BLACK,
-                label='Direction',
-                value='v0.0.0',
-                position=(127, 20),
+                label='Direction:',
+                value='North-East',
+                position=(1, 95),
                 label_font=fonts.Small,
                 text_font=fonts.Small
             )
         )
-
-    # called when the ui is updated
-    def on_ui_update(self, ui):
-        # update those elements
-        some_voltage = 0.1
-        some_capacity = 100.0
-        ui.set('ups', "%4.2fV/%2i%%" % (some_voltage, some_capacity))
