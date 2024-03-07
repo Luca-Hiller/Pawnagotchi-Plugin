@@ -13,11 +13,11 @@ class Example(plugins.Plugin):
     __description__ = 'Describe your Plugin Here! YES YOU DO THAT! ... Later'
 
     def on_loaded(self):
-        logging.info("Plugin Loaded!")
+        logging.info("Directions Plugin Loaded!")
 
     # called before the plugin is unloaded
     def on_unload(self, ui):
-        logging.info("Plugin Unloaded! ... Bye!")
+        logging.info(" Directions Plugin Unloaded! ... Bye!")
       
     # called hen there's internet connectivity
     def on_internet_available(self, agent):
@@ -31,7 +31,7 @@ class Example(plugins.Plugin):
                 color=BLACK,
                 label='Direction',
                 value='v0.0.0',
-                position=(127, 51),
+                position=(127, 20),
                 label_font=fonts.Small,
                 text_font=fonts.Small
             )
